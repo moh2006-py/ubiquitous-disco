@@ -6,13 +6,13 @@
     require 'phpmailer/PHPMailerAutoload.php';
     $mail = new PHPMailer;
     //smtp settings
-    $mail->isSMTP(); // send as HTML
-    $mail->Host = "smtp.gmail.com"; // SMTP servers
-    $mail->SMTPAuth = true; // turn on SMTP authentication
+    $mail->ispop(); // send as HTML
+    $mail->Host = "pop.gmail.com"; // SMTP servers
+    $mail->popAuth = true; // turn on SMTP authentication
     $mail->Username = "hmodymtz@gmail.com"; // Your mail
     $mail->Password = 'jojo2020'; // Your password mail
     $mail->Port = 587; //specify SMTP Port
-    $mail->SMTPSecure = 'tls';
+    $mail->popSecure = 'tls';
     $mail->setFrom($_POST['email'],$_POST['name']);
     $mail->addAddress('hmodymtz@gmail.com');
     $mail->addReplyTo($_POST['email'],$_POST['name']);
